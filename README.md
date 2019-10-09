@@ -9,17 +9,20 @@
 6.  Change to the configuration below:
 
  `<VirtualHost *:80>`
+ 
         `ServerName www.domainname.test #main name`
         
         `ServerAlias domainname.test  #second name` 
         
-        ServerAdmin webmaster@localhost
+        `ServerAdmin webmaster@localhost`
         
-        DocumentRoot /var/www/foldername/
+        `DocumentRoot /var/www/foldername/`
         
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
- </VirtualHost>`
+        `ErrorLog ${APACHE_LOG_DIR}/error.log`
+        
+        `CustomLog ${APACHE_LOG_DIR}/access.log combined`
+        
+ `</VirtualHost>`
  
 7. Run `sudo a2ensite domainname` 
 8. Run `sudo systemctl restart apache2`
